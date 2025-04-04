@@ -1,0 +1,66 @@
+@import "antd/dist/antd.css";
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        sans-serif;
+    background-color: aliceblue;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+.loginArea .ant-modal-footer {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+
+    body {
+        color: white;
+        background: black;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        color-scheme: light;
+    }
+
+    body {
+        background: aliceblue;
+        color: black;
+    }
+}
+
+
+.content-layout {
+    width: 1080px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+.content-main {
+    min-height: calc(100vh - 110px);
+    overflow-y: auto;
+}

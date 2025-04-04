@@ -1,0 +1,21 @@
+{
+    "extends": [
+        "next/core-web-vitals"
+        // "eslint:recommended",
+        // "eslint-config-prettier",
+        // "plugin:prettier/recommended",
+        // "prettier"
+    ],
+    "rules": {
+        "quotes": [
+            "warn",
+            "single",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "indent": ["warn", 4],
+        "semi": ["warn", "always"],
+        "no-unused-vars": "warn"
+    }
+}

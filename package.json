@@ -1,0 +1,81 @@
+{
+  "name": "my-nextjs-blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev-local": "node ./server.js",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --fix"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.8.0",
+    "@mdx-js/loader": "^2.1.5",
+    "@mdx-js/react": "^2.1.5",
+    "@next/mdx": "^13.0.5",
+    "@uiw/react-md-editor": "3.6.0",
+    "antd": "^4.24.1",
+    "axios": "^1.1.3",
+    "classnames": "^2.3.2",
+    "iron-session": "^6.3.1",
+    "js-base64": "^3.7.2",
+    "markdown-to-jsx": "^7.1.7",
+    "markdown-to-txt": "^2.0.1",
+    "md5": "^2.3.0",
+    "mobx": "^6.7.0",
+    "mobx-react-lite": "^3.4.0",
+    "mockjs": "^1.1.0",
+    "mysql2": "^2.3.3",
+    "next": "13.0.2",
+    "next-cookie": "^2.8.0",
+    "next-remove-imports": "^1.0.8",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.20.2",
+    "@types/md5": "^2.3.2",
+    "@types/mockjs": "^1.0.7",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "babel-plugin-transform-typescript-metadata": "^0.3.2",
+    "date-fns": "^2.29.3",
+    "eslint": "^8.26.0",
+    "eslint-config-next": "^13.0.2",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "sass": "^1.56.0",
+    "sort-package-json": "^2.0.0",
+    "stylelint": "^14.14.1",
+    "stylelint-config-standard-scss": "^6.0.0",
+    "typescript": "^4.8.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "package.json": "sort-package-json",
+    "*.{jsx,tsx,js,ts}": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ],
+    "*.{css,scss}": [
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.{png,jpeg,jpg,gif,svg}": [
+      "imagemin-lint-staged",
+      "git add"
+    ]
+  }
+}
